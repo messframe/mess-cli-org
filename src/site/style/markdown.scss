@@ -1,0 +1,131 @@
+.markdown {
+  color: black;
+  pre {
+    padding: 2em;
+    margin: 0;
+    display: block;
+    overflow-x: auto;
+    font-size: 12px;
+    line-height: 1.8;
+    background: #fafafa;
+    border-radius: 5px;
+    -webkit-font-smoothing: auto;
+    font-family: Menlo,Monaco,Consolas,Courier,monospace;
+    code {
+      background: rgba(35, 36, 31, 0);
+    }
+  }
+  code {
+    display: inline-block;
+    overflow-x: auto;
+    vertical-align: middle;
+    line-height: 1.8;
+    background: #eee;
+    border-radius: 5px;
+    -webkit-font-smoothing: auto;
+    font-family: Menlo,Monaco,Consolas,Courier,monospace;
+    padding: 0 0.5em;
+  }
+  table {
+    border-collapse: collapse;
+    text-align: left;
+    margin: 32px 0;
+    color: #606266;
+    width: 100%;
+    thead {
+      th {
+        text-align: left;
+        white-space: nowrap;
+        color: #909399;
+        font-weight: 400;
+      }
+    }
+    th,td {
+      padding: 15px 10px;
+      border-bottom: 1px solid #dcdfe6;
+      font-size: 14px;
+    }
+  }
+  h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0;
+  }
+  h3 {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 55px 0 20px;
+  }
+  h4 {
+    font-weight: 400;
+  }
+  p {
+    font-size: 16px;
+    line-height: 2em;
+    color: #5e6d82;
+  }
+  img {
+    border-radius: 10px;
+    box-shadow: 0 0 10px #eee;
+    width: 70%;
+    margin: 30px 15%;
+    transition: all .3s;
+    &:hover {
+      box-shadow: 10px 10px 20px #eee;
+    }
+  }
+  .important {
+    color: orange;
+    letter-spacing: 1px;
+  }
+  blockquote {
+    border-left: 5px solid #faad14;
+    background-color: #ffd666;
+    padding: 10px 20px;
+    margin: 0;
+    p {
+      color: #6b5900;
+    }
+  }
+  .tip {
+    border-color: #42b983;
+    background-color: #eee;
+    p {
+      color: #5e6d82;
+    }
+  }
+  hr {
+    border: none;
+    height: 1px;
+    background-color: lightgrey;
+  }
+  li {
+    margin: 10px 0;
+  }
+  .tipCode {
+    background-color: white;
+  }
+}
+.javascript {
+  color: darkseagreen;
+}
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+}
+
+
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #eee;
+}
