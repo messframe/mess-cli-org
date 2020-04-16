@@ -4,7 +4,7 @@
 ***
 运行`mess init`来创建一个核心服务项目
 ```bash
-mess init
+$ mess init
 ```
 你还需要输入核心服务的名称
 ![mess init](./mess_init.png)  

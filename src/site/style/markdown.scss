@@ -1,5 +1,9 @@
 .markdown {
   color: black;
+  a {
+    color: #409eff;
+    &:hover {color:#66b1ff;}   /* 鼠标指针移动到链接上 */
+  }
   pre {
     padding: 2em;
     margin: 0;
@@ -20,11 +24,15 @@
     overflow-x: auto;
     vertical-align: middle;
     line-height: 1.8;
-    background: #eee;
+    background: #f8f8f8;
     border-radius: 5px;
     -webkit-font-smoothing: auto;
     font-family: Menlo,Monaco,Consolas,Courier,monospace;
     padding: 0 0.5em;
+    color: #409eff;
+  }
+  .language-js {
+    color: black;
   }
   table {
     border-collapse: collapse;
@@ -109,6 +117,7 @@
 .javascript {
   color: darkseagreen;
 }
+
 
 /* 设置滚动条的样式 */
 ::-webkit-scrollbar {

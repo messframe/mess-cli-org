@@ -4,7 +4,7 @@
             mess-cli
         </div>
         <div class="demo-header-right">
-            <div class="demo-header-right-item">
+            <!-- <div class="demo-header-right-item">
                 <el-dropdown>
                     <span class="el-dropdown-link">
                         0.0.1
@@ -14,8 +14,12 @@
                         <el-dropdown-item>0.0.1</el-dropdown-item>
                     </el-dropdown-menu>
                 </el-dropdown>
+            </div> -->
+            <div class="demo-header-right-item" @click="openUrl('https://github.com/messframe/mess-cli/issues')">
+                <span>Issues</span>
+                <i class="el-icon-link"></i>
             </div>
-            <div class="demo-header-right-item" @click="openUrl()">
+            <div class="demo-header-right-item" @click="openUrl('https://github.com/messframe/mess-cli')">
                 <span>GitHub</span>
                 <i class="el-icon-link"></i>
             </div>
@@ -28,7 +32,7 @@ export default {
     name: 'demo-header',
     methods: {
         openUrl (url) {
-            window.open('https://github.com/messframe/mess-cli')
+            window.open(url)
         }
     }
 }

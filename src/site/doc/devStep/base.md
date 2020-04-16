@@ -3,4 +3,4 @@
 ![核心服务](./center.png)
 
 1. 首先创建一个核心服务：`mess init`
-2. 根据业务需要，创建`react、vue`项目，并将子模块<span class="important">手动注册</span>或<span class="important">自动注册</span>进核心服务
+2. 根据业务需要，通过`mess add`创建`react、vue`项目，并将子模块<span class="important"><a href='/#/registerSubModule'>手动注册</a></span>或<span class="important"><a href='/#/registerSubModule'>自动注册</a></span>进核心服务
