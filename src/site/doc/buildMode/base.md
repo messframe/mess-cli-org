@@ -1,5 +1,5 @@
 ## 打包
-每个由`mess-cli`生成的项目下面，都有`npm run build`命令与其相关的webpack配置文件  
+每个由`mess-cli`生成的项目下面，都有`npm run build`命令与其相关的webpack配置文件，可根据自身需求进行修改  
   
 
 * 核心服务打包后的文件在核心服务根目录下的`build`文件夹下

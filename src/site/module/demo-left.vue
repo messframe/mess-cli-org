@@ -5,8 +5,8 @@
                 <li class="_h1" :class="active('introduce')">
                     <a href="#/doc/introduce">介绍</a>
                 </li>
-                <li class="_h1" :class="active('changelog')">
-                    <a href="#/doc/changelog">更新日志</a>
+                <li class="_h1" :class="active('quickStart')">
+                    <a href="#/doc/quickStart">快速开始</a>
                 </li>
                 <li class="_h1" :class="active('install')">
                     <a href="#/doc/install">安装</a>

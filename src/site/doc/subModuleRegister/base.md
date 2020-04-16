@@ -10,7 +10,7 @@
 
 ### 手动注册--config.js
 ***
-首先你需要在`核心服务/config.js`中，修改配置文件。
+你只需要在`核心服务/mess.config.js`中，修改配置文件中的`components`属性即可。
 ```js
 // config.js
 module.exports = {
@@ -32,19 +32,8 @@ module.exports = {
 }
 ```  
 配置文件中的`center`是`mess init`时创建核心服务的名称，<span class='important'>center的配置建议不要修改</span>，上述代码中，可以看到还有一个`cA`模块被注册。  
-* `components`中的`cA`是指这个模块的名称
-* `moduleName`指子模块导出的模块名，核心服务通过这个名称将子模块引用进来
+* `components`中的`cA`是指这个模块的名称，这个与页面的路由存在绑定关系
+* `moduleName`指子模块定义的模块名，核心服务通过`SystemJS`和`moduleName`将子模块引用进来
 * `origin`指子模块运行的地址，这里仅对`development模式`有效
 * `entry`指子模块的入口文件相对`origin`路径，请确保由`origin`和`entry`可以访问到子模块的入口文件
-* `prodOrigin(可选)`指子模块打包后(`production`)的访问地址，适用于子模块打包后需要单独运行，可能是引入的子模块能够被多个项目复用的场景，这里同样也要确保`prodOrigin`和`entry`可以访问到子模块的入口文件
-### 确认子模块导出名称
-子模块导出模块名在`子模块/src/set-public-path.js`中进行设置，往往它有一个默认值，但是这个默认值通常不那么有用，你需要手动去修改它，让它跟你在核心服务配置文件注册的模块名是一致的
-
-```js
-// set-public-path.js
-...
-function getUrl () {
-  return window.System.resolve('@center/cA')
-}
-...
-```
+* `prodOrigin`指子模块打包后(`production`)的访问地址，适用于子模块打包后需要单独运行，可能是引入的子模块能够被多个项目复用的场景，这里同样也要确保`prodOrigin`和`entry`可以访问到子模块的入口文件

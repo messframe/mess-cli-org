@@ -1,13 +1,39 @@
 ## 事件总线
 <br>
 <blockquote class='tip'>
-    <p>核心服务提供了一个<span class='important'>事件总线</span>，名为<span class='important'>eventBus</span>，挂载到window对象中，供全局访问</p>
+    <p>核心服务提供了一个<span class='important'>事件总线</span>，名为<span class='important'>eventBus</span></p>
 </blockquote>  
 
 <span class='important'>建议不要太依赖于事件总线来进行跨模块间的通信，因为这样会增大模块间的耦合程度，违背了前端微服务的设计初衷。</span>  
 事件总线通常用于全局通知，例如换肤、多语言、token认证过期、权限下发(下发到其他模块)等，在某个模块（通常会存在某个主模块）发布了这些事件之后，子模块各自去订阅相关事件即可。
 
-你可以通过`window.eventBus`或者`eventBus`去使用它。  
+***  
+在react项目中
+```js
+import {singleSpa} from '../utils/singleSpa'
+
+...
+singleSpa.eventBus.trigger('eventName')
+
+singleSpa.eventBus.on('eventName', () => {  })
+
+singleSpa.eventBus.off('eventName')
+...
+```  
+***  
+在vue项目中
+```js
+...
+this.$singleSpa.eventBus.trigger('eventName')
+
+this.$singleSpa.eventBus.on('eventName', () => {  })
+
+this.$singleSpa.eventBus.off('eventName')
+...
+```  
+***  
+
+
 `eventBus`提供了三个简单的API：`eventBus.on`、`eventBus.trigger`、`eventBus.off`  
 
 ### eventBus.on
